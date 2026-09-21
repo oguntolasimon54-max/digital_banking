@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Public Sans", sans-serif;
+}
+:root{
+    --blue_darker:hsl(233, 26%, 24%);
+    --green:hsl(136, 64%, 51%);
+    --cyan:hsl(192, 69%, 51%);
+    --gray_darker:hsl(233, 8%, 62%);
+    --gray_medium:hsl(220, 16%, 96%);
+    --gray_light:hsl(0, 0%, 98%);
+    --white:hsl(0, 100%, 100%);
+    --default_size:18px;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width:100%;
+    height:100vh;
+    background: var(--gray_light);
+}
+.header-nav{
+    background: var(--white);
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.header-nav nav ul li{
+    list-style: none;
+    display: inline;
+    margin: 0 1rem;
+    position: relative;
+}
+.header-nav nav ul li a{
+    text-decoration: none;
+    color: var(--gray_darker);
+    padding-bottom: 0.7rem;
+    font-size: var(--default_size);
+}
+.btn{
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: var(--white);
+    background-image: linear-gradient(to bottom, var(--green),var(--cyan));
+    border: none;
+    cursor: pointer;
+    font-size: var(--default_size);
+    font-weight: 400;
+    
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.header-nav nav ul li::after{
+   content:"";
+   width: 0;
+   height: 3px;
+   background-image: linear-gradient(to right, var(--cyan),var(--green));
+   position: absolute;
+   left: 0;
+   bottom: -1.5rem;
+   transition: all 0.3s ease-out;
+}
+.header-nav nav ul li:hover::after{
+    width: 100%;
+}
+.header-nav nav ul li a:hover{
+    color: var(--blue_darker);
+}
+.header-main{
+    display: flex;
+    align-items: center;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 900px;
+    background-position: 450px -140px;
+}
+.headermain-right,.headermain-left{
+    flex:1;
+}
+.headermain-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+}
+.headermain-right img{
+    width: 100%;
+    object-fit: contain;
+    margin-right: -15%;
+    margin-top: -10%;
+  
+
+}
+
